@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="headline1">36sp</dimen>
+    <dimen name="title">18sp</dimen>
+    <dimen name="subtitle">14sp</dimen>
+    <dimen name="dimen_12">12sp</dimen>
+</resources>
