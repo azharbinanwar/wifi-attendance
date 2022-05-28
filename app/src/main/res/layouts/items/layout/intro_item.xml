@@ -20,14 +20,13 @@
             android:layout_width="wrap_content"
             android:layout_height="80dp" />
 
-
         <TextView
             android:id="@+id/tv_intro_headline"
+            style="@style/TextAppearance.Material3.HeadlineMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="headline"
-            android:textSize="@dimen/headline1"
-            android:textStyle="bold" />
+            android:text="@string/headline"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="wrap_content"
@@ -35,10 +34,11 @@
 
         <TextView
             android:id="@+id/tv_intro_subtitle"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/default_grey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="subtitle"
-            android:textSize="@dimen/title"
+            android:text="@string/subtitle"
             android:textAlignment="center" />
 
     </LinearLayout>

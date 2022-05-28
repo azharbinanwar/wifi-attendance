@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Wifi Attendance</string>
     <string name="next">Next</string>
+    <string name="skip">Skip</string>
 </resources>

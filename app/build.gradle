@@ -29,6 +29,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res',
+                            'src/main/res/layouts',
+                            'src/main/res/layouts/activities',
+                            'src/main/res/layouts/items',
+                            'src/main/res/app_icon/',
+                            'src/main/res/tab_indicator'
+                    ]
+        }
+    }
 }
 
 dependencies {
@@ -39,4 +52,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+//    SPLASH SCREEN
+    implementation 'androidx.core:core-splashscreen:1.0.0-rc01'
+
 }

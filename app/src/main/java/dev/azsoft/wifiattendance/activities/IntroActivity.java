@@ -1,5 +1,6 @@
 package dev.azsoft.wifiattendance.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -12,7 +13,9 @@ import java.util.Objects;
 import dev.azsoft.wifiattendance.R;
 import dev.azsoft.wifiattendance.adapter.IntroAdapter;
 import dev.azsoft.wifiattendance.databinding.ActivityIntroBinding;
+import dev.azsoft.wifiattendance.global.Const;
 import dev.azsoft.wifiattendance.models.Intro;
+import dev.azsoft.wifiattendance.utils.SharedPrefs;
 
 public class IntroActivity extends AppCompatActivity {
     private List<Intro> introList;
@@ -22,12 +25,19 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityIntroBinding binding = ActivityIntroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        init();
         Objects.requireNonNull(getSupportActionBar()).hide();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        SharedPrefs prefs = SharedPrefs.getInstance();
+        prefs.setBoolean(Const.FIRST_LAUNCH, false);
 
-        init();
         IntroAdapter introAdapter = new IntroAdapter(getApplicationContext(), introList);
         binding.vpIntro.setAdapter(introAdapter);
+        binding.tabLayout.setupWithViewPager(binding.vpIntro);
+        binding.btnNext.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+        });
     }
 
     private void init() {
