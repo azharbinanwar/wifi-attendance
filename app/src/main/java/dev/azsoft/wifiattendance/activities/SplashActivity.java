@@ -3,11 +3,8 @@ package dev.azsoft.wifiattendance.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Objects;
 
 import dev.azsoft.wifiattendance.databinding.ActivitySplashBinding;
 import dev.azsoft.wifiattendance.global.Const;
@@ -19,16 +16,15 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivitySplashBinding binding = ActivitySplashBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        Objects.requireNonNull(getSupportActionBar()).hide();
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(ActivitySplashBinding.inflate(getLayoutInflater()).getRoot());
+//        Objects.requireNonNull(getSupportActionBar()).hide();
+
         SharedPrefs.getInstance().Initialize(getApplicationContext());
         SharedPrefs prefs = SharedPrefs.getInstance();
 
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(SplashActivity.this, prefs.getBoolean(Const.FIRST_LAUNCH, false) ? IntroActivity.class : IntroActivity.class));
+            startActivity(new Intent(SplashActivity.this, prefs.getBoolean(Const.FIRST_LAUNCH, false) ? LoginActivity.class : LoginActivity.class));
             finish();
-        }, 1000);
+        }, 000);
     }
 }

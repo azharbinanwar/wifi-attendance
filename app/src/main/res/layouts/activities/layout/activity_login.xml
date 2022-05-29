@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.LoginActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dimen_12"
+        android:orientation="vertical"
+        app:contentPadding="@dimen/dimen_12">
+
+        <LinearLayout
+            android:id="@+id/llll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180sp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_centerInParent="true"
+                    android:background="?colorPrimary"
+                    android:src="@drawable/ic_person_circle_outline"
+                    app:shapeAppearanceOverlay="@style/ShapeableImageView.Circular"
+                    app:tint="?colorOnPrimary" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/Widget.App.TextInputLayout.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                app:startIconDrawable="@drawable/ic_mail_outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/Widget.App.TextInputLayout.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:startIconDrawable="@drawable/ic_mail_outline">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_12" />
+
+
+
+
+
+            <dev.azsoft.wifiattendance.custom_views.ExtendedButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:extIndicatorColor="@color/default_grey"
+                app:extText="Login" />
+            <dev.azsoft.wifiattendance.custom_views.ExtendedButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:extIndicatorColor="@color/default_grey"
+                app:extText="Login" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

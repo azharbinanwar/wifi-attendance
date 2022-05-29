@@ -38,7 +38,9 @@ android {
                             'src/main/res/layouts/activities',
                             'src/main/res/layouts/items',
                             'src/main/res/app_icon/',
-                            'src/main/res/tab_indicator'
+                            'src/main/res/tab_indicator',
+                            'src/main/res/assets',
+                            'src/main/res/layouts/custom_views'
                     ]
         }
     }

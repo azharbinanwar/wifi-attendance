@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExtendedButton">
+        <attr name="android:layout_height" format="string" />
+        <attr name="android:layout_width" format="string" />
+        <attr name="extText" format="string" />
+        <attr name="isProcessing" format="boolean" />
+        <attr name="extCornerRadius" format="integer" />
+        <attr name="extIndicatorSize" format="integer" />
+        <attr name="extIndicatorColor" format="integer" />
+        <attr name="extTrackThickness" format="integer" />
+        <attr name="extBackgroundTint" format="integer" />
+    </declare-styleable>
+</resources>
