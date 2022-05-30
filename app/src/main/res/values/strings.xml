@@ -6,4 +6,8 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="button">Button</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="headline">Headline</string>
+    <string name="subtitle">subtitle</string>
+    <string name="send_reset_email">Send reset email</string>
 </resources>

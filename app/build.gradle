@@ -40,7 +40,7 @@ android {
                             'src/main/res/app_icon/',
                             'src/main/res/tab_indicator',
                             'src/main/res/assets',
-                            'src/main/res/layouts/custom_views'
+                            'src/main/res/layouts/custom.views', 'src/main/res/selectors', 'src/main/res/fragments', 'src/main/res/layouts/fragments'
                     ]
         }
     }

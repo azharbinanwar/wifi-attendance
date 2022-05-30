@@ -12,6 +12,8 @@
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorOnPrimary">@color/color_on_primary</item>
 
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
         <!--material card-->
         <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
         <item name="materialButtonStyle">@style/Button.Elevation</item>

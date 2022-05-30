@@ -3,12 +3,14 @@
     <declare-styleable name="ExtendedButton">
         <attr name="android:layout_height" format="string" />
         <attr name="android:layout_width" format="string" />
-        <attr name="extText" format="string" />
+        <attr name="android:textColor" format="integer" />
+        <attr name="android:text" format="string" />
+        <attr name="android:backgroundTint" format="integer" />
+        <!--custom attribute-->
         <attr name="isProcessing" format="boolean" />
         <attr name="extCornerRadius" format="integer" />
         <attr name="extIndicatorSize" format="integer" />
         <attr name="extIndicatorColor" format="integer" />
         <attr name="extTrackThickness" format="integer" />
-        <attr name="extBackgroundTint" format="integer" />
     </declare-styleable>
 </resources>
