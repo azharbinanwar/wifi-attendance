@@ -6,6 +6,8 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.ColorInt;
@@ -48,7 +50,6 @@ public class ExtendedButton extends RelativeLayout {
         extBtn = findViewById(R.id.extended_btn);
         extRL = findViewById(R.id.extended_rl);
         extCircularProgressIndicator = findViewById(R.id.extended_circular_progress_indicator);
-
 
         CharSequence text = getText();
         setText(text);
@@ -194,4 +195,27 @@ public class ExtendedButton extends RelativeLayout {
         extRL.setLayoutParams(layoutParams);
     }
 
+    private OnClickListener listener;
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_UP) {
+            if (listener != null) listener.onClick(this);
+        }
+        return super.dispatchTouchEvent(event);
+    }
+
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_UP && (event.getKeyCode() == KeyEvent.KEYCODE_DPAD_CENTER || event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
+            if (listener != null) listener.onClick(this);
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+
+    public void setOnClickListener(OnClickListener listener) {
+        this.listener = listener;
+    }
 }

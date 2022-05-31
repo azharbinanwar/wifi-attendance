@@ -5,6 +5,7 @@
         <item name="colorSurface">@color/color_surface</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
         <item name="elevationOverlayColor">@color/elevation_overlay_color</item>
+        <item name="elevationOverlayEnabled">false</item>
         <!--status bar-->
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -19,6 +20,25 @@
         <item name="materialButtonStyle">@style/Button.Elevation</item>
 
 
+    </style>
+
+    <style name="Theme.WifiAttendance.DayNight.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="elevationOverlayColor">@color/elevation_overlay_color</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <!--status bar-->
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <!--material card-->
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+        <item name="materialButtonStyle">@style/Button.Elevation</item>
     </style>
 
     <!--material card-->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:label="NOTHING"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="dev.azsoft.wifiattendance.activities.fragments.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action>
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_attendance"
+        android:name="dev.azsoft.wifiattendance.activities.fragments.attendance.AttendanceFragment"
+        android:label="@string/attendance"
+        tools:layout="@layout/fragment_attendance" />
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="dev.azsoft.wifiattendance.activities.fragments.stats.StatsFragment"
+        android:label="@string/stats"
+        tools:layout="@layout/fragment_stats" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="dev.azsoft.wifiattendance.activities.fragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

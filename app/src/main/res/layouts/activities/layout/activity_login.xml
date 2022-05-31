@@ -23,7 +23,6 @@
             app:contentPadding="@dimen/dimen_12">
 
             <LinearLayout
-                android:id="@+id/llll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
@@ -73,8 +72,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    app:passwordToggleEnabled="true"
                     app:passwordToggleDrawable="@drawable/show_password_selector"
+                    app:passwordToggleEnabled="true"
                     app:startIconDrawable="@drawable/ic_lock">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -105,13 +104,14 @@
 
 
                 <dev.azsoft.wifiattendance.views.ExtendedButton
+                    android:id="@+id/btn_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="?colorPrimary"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:text="@string/login"
-                    app:extIndicatorColor="@color/default_grey" />
+                    app:extIndicatorColor="?colorOnPrimary" />
 
 
             </LinearLayout>
