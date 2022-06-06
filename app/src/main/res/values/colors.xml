@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue_200">#6A96E4</color>
-    <color name="blue_500">#3578D8</color>
-    <color name="blue_700">#FF0052e3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_on_surface">#000000</color>
+    <color name="elevation_overlay_color">@android:color/transparent</color>
+    <color name="status_bar_color">#FFFFFF</color>
+
+
+    <color name="color_primary">#00796b</color>
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="color_primary_variant">#6A96E4</color>
+
+
+    <color name="color_secondary">#2CA196</color>
+    <color name="color_secondary_variant">#FF018786</color>
+    <color name="color_on_secondary">#FFFFFF</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="default_grey">#808080</color>
+    <color name="default_grey">#C0C0C0</color>
+
+    <color name="error_color">#F85752</color>
+
 </resources>
+

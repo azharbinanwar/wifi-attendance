@@ -19,6 +19,7 @@ import dev.azsoft.wifiattendance.utils.SharedPrefs;
 
 public class IntroActivity extends AppCompatActivity {
     private List<Intro> introList;
+    private SharedPrefs prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +27,10 @@ public class IntroActivity extends AppCompatActivity {
         ActivityIntroBinding binding = ActivityIntroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         init();
+
         Objects.requireNonNull(getSupportActionBar()).hide();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        SharedPrefs prefs = SharedPrefs.getInstance();
+
         prefs.setBoolean(Const.FIRST_LAUNCH, false);
 
         IntroAdapter introAdapter = new IntroAdapter(getApplicationContext(), introList);
@@ -41,6 +43,7 @@ public class IntroActivity extends AppCompatActivity {
     }
 
     private void init() {
+        prefs = SharedPrefs.getInstance();
         introList = new ArrayList<>();
         introList.add(new Intro(R.drawable.app_logo, "Create profile", "Create your profile and wait for admin approvel"));
         introList.add(new Intro(R.drawable.app_logo, "Start your time", "Track your time automatically"));

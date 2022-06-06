@@ -10,10 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WifiAttendance">
         <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dashboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

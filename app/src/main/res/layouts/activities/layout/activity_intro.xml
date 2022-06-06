@@ -28,7 +28,8 @@
             android:layout_gravity="center"
             app:tabBackground="@drawable/circular_tab"
             app:tabIndicatorGravity="center"
-            app:tabIndicatorHeight="0dp" />
+            app:tabIndicatorHeight="0dp"
+            />
 
         <Button
             android:id="@+id/btn_next"
