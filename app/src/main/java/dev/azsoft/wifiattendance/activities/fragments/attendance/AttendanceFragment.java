@@ -19,8 +19,7 @@ public class AttendanceFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        AttendanceViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(AttendanceViewModel.class);
+        AttendanceViewModel dashboardViewModel = new ViewModelProvider(this).get(AttendanceViewModel.class);
 
         binding = FragmentAttendanceBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

@@ -2,10 +2,10 @@
 
     <style name="Theme.WifiAttendance" parent="Theme.Material3.DayNight">
         <!-- app bar-->
-        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorSurface">@color/color_primary</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
-        <item name="elevationOverlayColor">@color/elevation_overlay_color</item>
-        <item name="elevationOverlayEnabled">false</item>
+<!--        <item name="elevationOverlayColor">@color/elevation_overlay_color</item>-->
+<!--        <item name="elevationOverlayEnabled">false</item>-->
         <!--status bar-->
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -22,33 +22,25 @@
 
     </style>
 
-    <style name="Theme.WifiAttendance.DayNight.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="AppTheme.AppBarOverlay" parent="Theme.WifiAttendance">
+        <!-- app bar-->
         <item name="colorSurface">@color/color_surface</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
         <item name="elevationOverlayColor">@color/elevation_overlay_color</item>
         <item name="elevationOverlayEnabled">false</item>
-        <!--status bar-->
-        <item name="android:statusBarColor">@color/status_bar_color</item>
-        <item name="android:windowLightStatusBar">true</item>
-
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorOnPrimary">@color/color_on_primary</item>
-
-        <item name="colorSecondary">@color/color_secondary</item>
-        <item name="colorOnSecondary">@color/color_on_secondary</item>
-        <!--material card-->
-        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
-        <item name="materialButtonStyle">@style/Button.Elevation</item>
+        <item name="elevation">4dp</item>
     </style>
+
+
 
     <!--material card-->
     <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
         <item name="cardCornerRadius">@dimen/radius_8</item>
         <item name="cardElevation">@dimen/elevation_4</item>
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/default_grey</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="colorSurface">@color/error_color</item>
+        <item name="colorOnSurface">@color/error_color</item>
     </style>
 
     <!--buttons-->

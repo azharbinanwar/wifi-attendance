@@ -4,30 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     android:label="NOTHING"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/menu_home">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/menu_home"
         android:name="dev.azsoft.wifiattendance.activities.fragments.home.HomeFragment"
-        tools:layout="@layout/fragment_home" >
-        <action>
-
-        </action>
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_attendance"
+        android:id="@+id/menu_attendance"
         android:name="dev.azsoft.wifiattendance.activities.fragments.attendance.AttendanceFragment"
         android:label="@string/attendance"
         tools:layout="@layout/fragment_attendance" />
 
     <fragment
-        android:id="@+id/navigation_stats"
+        android:id="@+id/menu_stats"
         android:name="dev.azsoft.wifiattendance.activities.fragments.stats.StatsFragment"
         android:label="@string/stats"
         tools:layout="@layout/fragment_stats" />
     <fragment
-        android:id="@+id/navigation_profile"
+        android:id="@+id/menu_profile"
         android:name="dev.azsoft.wifiattendance.activities.fragments.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
