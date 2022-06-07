@@ -4,11 +4,12 @@
         <!-- app bar-->
         <item name="colorSurface">@color/color_primary</item>
         <item name="colorOnSurface">@color/color_on_surface</item>
-<!--        <item name="elevationOverlayColor">@color/elevation_overlay_color</item>-->
-<!--        <item name="elevationOverlayEnabled">false</item>-->
+        <!--        <item name="elevationOverlayColor">@color/elevation_overlay_color</item>-->
+        <!--        <item name="elevationOverlayEnabled">false</item>-->
         <!--status bar-->
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/window_background</item>
 
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorOnPrimary">@color/color_on_primary</item>
@@ -20,6 +21,24 @@
         <item name="materialButtonStyle">@style/Button.Elevation</item>
 
 
+
+
+
+    </style>
+
+    <style name="Theme.WifiAttendance.TitleBold" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dimen_16</item>
+    </style>
+    <style name="Theme.WifiAttendance.Subtitle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/default_grey</item>
+
+    </style>
+
+    <style name="Theme.WifiAttendance.Headline1Primary" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?colorPrimary</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="Theme.WifiAttendance">
@@ -29,15 +48,20 @@
         <item name="elevationOverlayColor">@color/elevation_overlay_color</item>
         <item name="elevationOverlayEnabled">false</item>
         <item name="elevation">4dp</item>
+        <item name="android:elevation">4dip</item>
+
     </style>
 
+    <style name="AppTheme.AppbarBottom" parent="Theme.WifiAttendance">
+        <item name="android:windowBackground">@color/bottom_nav_background</item>
+    </style>
 
 
     <!--material card-->
     <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
         <item name="cardCornerRadius">@dimen/radius_8</item>
-        <item name="cardElevation">@dimen/elevation_4</item>
+        <item name="cardElevation">@dimen/zero</item>
         <item name="cardBackgroundColor">@color/white</item>
         <item name="colorSurface">@color/error_color</item>
         <item name="colorOnSurface">@color/error_color</item>

@@ -20,16 +20,12 @@ import dev.azsoft.wifiattendance.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
-    private View view;
-
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
 
         binding.topAppBar.setOnMenuItemClickListener(this::onMenuItemClick);
-        binding.btn.setOnClickListener(this::onClick);
-        view = binding.getRoot();
-        return view;
+        return binding.getRoot();
     }
 
 
@@ -37,11 +33,6 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
-    }
-
-    private void onClicking() {
-        Toast.makeText(getActivity(), "WIthIN", Toast.LENGTH_SHORT).show();
-
     }
 
 
@@ -54,7 +45,4 @@ public class HomeFragment extends Fragment {
         return false;
     }
 
-    private void onClick(View view) {
-        onClicking();
-    }
 }

@@ -4,6 +4,8 @@
     <color name="color_on_surface">#000000</color>
     <color name="elevation_overlay_color">@android:color/transparent</color>
     <color name="status_bar_color">#FFFFFF</color>
+    <color name="window_background">#F8F8F8</color>
+    <color name="bottom_nav_background">#FFFFFF</color>
 
 
     <color name="color_primary">#00796b</color>

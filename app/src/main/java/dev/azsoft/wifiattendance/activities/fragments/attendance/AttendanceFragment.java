@@ -9,29 +9,41 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import dev.azsoft.wifiattendance.adapter.AttendanceAdapter;
 import dev.azsoft.wifiattendance.databinding.FragmentAttendanceBinding;
+import dev.azsoft.wifiattendance.models.Attendance;
 
 
 public class AttendanceFragment extends Fragment {
 
     private FragmentAttendanceBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        AttendanceViewModel dashboardViewModel = new ViewModelProvider(this).get(AttendanceViewModel.class);
-
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentAttendanceBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        init();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        return binding.getRoot();
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    void init() {
+        binding.rlAttendance.setLayoutManager(new LinearLayoutManager(getActivity()));
+        List<Attendance> items = new ArrayList<>();
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        AttendanceAdapter attendanceAdapter = new AttendanceAdapter(items);
+        binding.rlAttendance.setAdapter(attendanceAdapter);
     }
 }
