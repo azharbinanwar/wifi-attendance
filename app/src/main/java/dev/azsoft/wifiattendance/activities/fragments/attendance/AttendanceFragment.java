@@ -43,6 +43,13 @@ public class AttendanceFragment extends Fragment {
         items.add(new Attendance());
         items.add(new Attendance());
         items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
+        items.add(new Attendance());
         AttendanceAdapter attendanceAdapter = new AttendanceAdapter(items);
         binding.rlAttendance.setAdapter(attendanceAdapter);
     }

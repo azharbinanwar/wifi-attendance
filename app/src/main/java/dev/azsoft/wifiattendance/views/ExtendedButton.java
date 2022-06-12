@@ -24,6 +24,7 @@ public class ExtendedButton extends RelativeLayout {
     private RelativeLayout extRL;
     private CircularProgressIndicator extCircularProgressIndicator;
     private LayoutParams layoutParams;
+    private static final int DEFAULT_VALUE = 168;
 
 
     public ExtendedButton(Context context, AttributeSet attrs) {
@@ -181,16 +182,36 @@ public class ExtendedButton extends RelativeLayout {
         RelativeLayout.LayoutParams layoutParams;
 //        LayoutParams.WRAP_CONTENT = -2
 //        LayoutParams.MATCH_PARENT = -1
-        if ((width.equals("-1") || width.equals("-2")) && (height.equals("-2") || height.equals("-1"))) {
-            layoutParams = new LayoutParams(Integer.parseInt(width), height.equals("-2") ? 168 : Integer.parseInt(height));
+        if ((width.equals("-1") || width.equals("-2")) && (!height.equals("-2") && !height.equals("-1"))) {
+            int pixelHeight = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_height, LayoutParams.MATCH_PARENT);
+            if (width.equals("-2")) {
+                extBtn.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, pixelHeight));
+            }
+            layoutParams = new LayoutParams(Integer.parseInt(width), pixelHeight);
+        } else if ((!width.equals("-1") && !width.equals("-2")) && (height.equals("-2") || height.equals("-1"))) {
+            int pixelWidth = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_width, LayoutParams.MATCH_PARENT);
+            layoutParams = new LayoutParams(pixelWidth, height.equals("-2") ? DEFAULT_VALUE : Integer.parseInt(height));
+        } else if ((width.equals("-1") || width.equals("-2")) && (height.equals("-2") || height.equals("-1"))) {
+            layoutParams = new LayoutParams(Integer.parseInt(width), height.equals("-2") ? DEFAULT_VALUE : Integer.parseInt(height));
             if (width.equals("-2")) {
                 extBtn.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, height.equals("-2") ? LayoutParams.MATCH_PARENT : Integer.parseInt(height)));
             }
         } else {
+            System.out.println("ExtendedButton.extSetLayoutParams");
             int pixelHeight = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_height, LayoutParams.MATCH_PARENT);
-            int pixelWidth = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_width, -LayoutParams.MATCH_PARENT);
+            int pixelWidth = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_width, LayoutParams.MATCH_PARENT);
             layoutParams = new LayoutParams(pixelWidth, pixelHeight);
         }
+//        if ((width.equals("-1") || width.equals("-2")) && (height.equals("-2") || height.equals("-1"))) {
+//            layoutParams = new LayoutParams(Integer.parseInt(width), height.equals("-2") ? 168 : Integer.parseInt(height));
+//            if (width.equals("-2")) {
+//                extBtn.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, height.equals("-2") ? LayoutParams.MATCH_PARENT : Integer.parseInt(height)));
+//            }
+//        } else {
+//            int pixelHeight = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_height, LayoutParams.MATCH_PARENT);
+//            int pixelWidth = attributes.getDimensionPixelSize(R.styleable.ExtendedButton_android_layout_width, -LayoutParams.MATCH_PARENT);
+//            layoutParams = new LayoutParams(pixelWidth, pixelHeight);
+//        }
         layoutParams.setMargins(0, 0, 0, 0);
         extRL.setLayoutParams(layoutParams);
     }

@@ -29,6 +29,8 @@
         android:layout_height="match_parent"
         android:layout_below="@id/top_app_bar_layout"
         tools:itemCount="40"
+        android:padding="4dp"
+        android:clipToPadding="false"
         tools:listitem="@layout/attendance_item" />
 
 

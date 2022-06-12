@@ -3,10 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/value_4"
+    android:paddingHorizontal="@dimen/value_8"
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
+        android:clickable="true"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -15,17 +18,17 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="@dimen/dimen_8"
-                android:layout_height="@dimen/dimen_56"
+                android:layout_width="@dimen/value_8"
+                android:layout_height="@dimen/value_56"
                 android:background="?colorPrimary" />
 
             <FrameLayout
-                android:layout_width="@dimen/dimen_56"
-                android:layout_height="@dimen/dimen_56">
+                android:layout_width="@dimen/value_56"
+                android:layout_height="@dimen/value_56">
 
                 <RelativeLayout
-                    android:layout_width="@dimen/dimen_56"
-                    android:layout_height="@dimen/dimen_56"
+                    android:layout_width="@dimen/value_56"
+                    android:layout_height="@dimen/value_56"
                     android:alpha="0.2"
                     android:background="?colorPrimary" />
 
@@ -45,17 +48,17 @@
 
 
                     <TextView
-                        style="@style/Theme.WifiAttendance.Headline1Primary"
+                        style="@style/Theme.WifiAttendance.Headline1.Primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:paddingTop="@dimen/dimen_12"
+                        android:paddingTop="@dimen/value_12"
                         android:text="@string/_24" />
                 </RelativeLayout>
             </FrameLayout>
 
             <Space
-                android:layout_width="@dimen/dimen_12"
+                android:layout_width="@dimen/value_12"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -65,7 +68,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/Theme.WifiAttendance.TitleBold"
+                    style="@style/Theme.WifiAttendance.Title.Bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"

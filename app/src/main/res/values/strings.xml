@@ -14,7 +14,7 @@
     <string name="title_activity_dashboard">DashboardActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-<!--    <string name="title_notifications">Notifications</string>-->
+    <!--    <string name="title_notifications">Notifications</string>-->
 
     <string name="profile">Profile</string>
     <string name="attendance">Attendance</string>
@@ -26,4 +26,8 @@
     <string name="check_in">Check In</string>
     <string name="your_hours_will_be_calculated_here">Your hours will be calculated here</string>
     <string name="_24">24</string>
+    <string name="joseph_kamal">joseph Kamal</string>
+    <string name="josephkamal_gmail_com">Josephkamal@gmail.com</string>
+    <string name="_923164944177">+923164944177</string>
+    <string name="sr_android_app_developer">Sr. Android App Developer</string>
 </resources>

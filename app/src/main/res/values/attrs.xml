@@ -13,4 +13,18 @@
         <attr name="extIndicatorColor" format="integer" />
         <attr name="extTrackThickness" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="DetailsTile">
+        <attr name="android:layout_height" format="string" />
+        <attr name="android:layout_width" format="string" />
+        <attr name="android:text" format="string" />
+        <attr name="android:textColor" format="integer" />
+
+        <attr name="android:src" format="reference" />
+
+        <attr name="leadingTint" format="integer" />
+        <attr name="leadingBackground" format="integer" />
+        <attr name="tileBackground" format="integer" />
+
+    </declare-styleable>
 </resources>

@@ -16,11 +16,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_margin="@dimen/dimen_12"
+            android:layout_margin="@dimen/value_12"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:orientation="vertical"
-            app:contentPadding="@dimen/dimen_12">
+            app:contentPadding="@dimen/value_12">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                         android:layout_centerInParent="true"
                         android:background="?colorPrimary"
                         android:src="@drawable/ic_person_outline"
-                        app:contentPadding="@dimen/dimen_24"
+                        app:contentPadding="@dimen/value_24"
                         app:shapeAppearanceOverlay="@style/ShapeableImageView.Circular"
                         app:tint="?colorOnPrimary" />
 
@@ -52,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    app:startIconDrawable="@drawable/ic_mail_outline">
+                    app:startIconDrawable="@drawable/ic_mail">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
 
                 <Space
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dimen_12" />
+                    android:layout_height="@dimen/value_12" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_password"
@@ -86,7 +86,7 @@
 
                 <Space
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dimen_4" />
+                    android:layout_height="@dimen/value_4" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_forgot_password"
@@ -96,11 +96,11 @@
                     android:layout_gravity="end"
                     android:text="@string/forgot_password"
                     android:textAlignment="textEnd"
-                    android:textSize="@dimen/dimen_12" />
+                    android:textSize="@dimen/value_12" />
 
                 <Space
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dimen_4" />
+                    android:layout_height="@dimen/value_4" />
 
 
                 <dev.azsoft.wifiattendance.views.ExtendedButton

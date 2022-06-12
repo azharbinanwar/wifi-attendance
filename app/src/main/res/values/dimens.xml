@@ -14,19 +14,24 @@
     <dimen name="elevation_4">4sp</dimen>
     <dimen name="zero">0sp</dimen>
 
-    <dimen name="dimen_2">2sp</dimen>
-    <dimen name="dimen_4">4sp</dimen>
-    <dimen name="dimen_8">4sp</dimen>
-    <dimen name="dimen_12">12sp</dimen>
-    <dimen name="dimen_16">16sp</dimen>
-    <dimen name="dimen_18">18sp</dimen>
-    <dimen name="dimen_24">24sp</dimen>
-    <dimen name="dimen_36">36sp</dimen>
-    <dimen name="dimen_48">48sp</dimen>
-    <dimen name="dimen_56">56sp</dimen>
-    <dimen name="dimen_96">96sp</dimen>
+    <dimen name="value_2">2sp</dimen>
+    <dimen name="value_4">4sp</dimen>
+    <dimen name="value_8">4sp</dimen>
+    <dimen name="value_12">12sp</dimen>
+    <dimen name="value_16">16sp</dimen>
+    <dimen name="value_18">18sp</dimen>
+    <dimen name="value_24">24sp</dimen>
+    <dimen name="value_36">36sp</dimen>
+    <dimen name="value_48">48sp</dimen>
+    <dimen name="value_56">56sp</dimen>
+    <dimen name="value_72">72sp</dimen>
+    <dimen name="value_96">96sp</dimen>
+    <dimen name="value_120">120sp</dimen>
+    <dimen name="value_124">124sp</dimen>
+    <dimen name="value_148">148sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="value_136">136sp</dimen>
 
 </resources>

@@ -15,7 +15,7 @@
         android:elevation="0dp"
         android:focusable="true"
         android:text="@string/button"
-        android:textColor="?colorOnPrimary" />
+        android:textColor="@color/color_on_primary" />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/extended_circular_progress_indicator"
@@ -23,6 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:elevation="@dimen/dimen_36" />
+        android:elevation="@dimen/value_36" />
 
 </RelativeLayout>
