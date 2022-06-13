@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.KeyEvent;
@@ -13,6 +14,7 @@ import android.widget.RelativeLayout;
 import androidx.annotation.ColorInt;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.color.MaterialColors;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 
 import dev.azsoft.wifiattendance.R;
@@ -36,11 +38,6 @@ public class ExtendedButton extends RelativeLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
-
-    public int pixelsFromDP(int pixels) {
-        return (int) (pixels * mContext.getResources().getDisplayMetrics().density + 0.5f);
-    }
-
 
     private void init(Context context, AttributeSet attrs) {
         this.mContext = context;
@@ -92,11 +89,11 @@ public class ExtendedButton extends RelativeLayout {
     }
 
     public int getTextColor() {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = mContext.getTheme();
-        theme.resolveAttribute(com.google.android.material.R.attr.colorOnPrimary, typedValue, true);
-        int color = typedValue.data;
-        return attributes.getInt(R.styleable.ExtendedButton_android_textColor, color);
+//        TypedValue typedValue = new TypedValue();
+//        Resources.Theme theme = mContext.getTheme();
+//        theme.resolveAttribute(com.google.android.material.R.attr.colorOnPrimary, typedValue, true);
+//        int color = typedValue.data;
+        return attributes.getInt(R.styleable.ExtendedButton_android_textColor, getThemeColor(R.color.color_on_primary));
     }
 
     public void setTextColor(int textColor) {
@@ -145,11 +142,7 @@ public class ExtendedButton extends RelativeLayout {
     }
 
     public int getBackgroundTint() {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = mContext.getTheme();
-        theme.resolveAttribute(com.google.android.material.R.attr.colorPrimary, typedValue, true);
-        int color = typedValue.data;
-        return attributes.getInt(R.styleable.ExtendedButton_android_backgroundTint, color);
+        return attributes.getInt(R.styleable.ExtendedButton_android_backgroundTint, getThemeColor(R.color.color_primary));
     }
 
     public void setBackgroundTint(int backgroundTint) {
@@ -157,11 +150,7 @@ public class ExtendedButton extends RelativeLayout {
     }
 
     public int getIndicatorColor() {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = mContext.getTheme();
-        theme.resolveAttribute(com.google.android.material.R.attr.colorOnPrimary, typedValue, true);
-        @ColorInt int color = typedValue.data;
-        return attributes.getInt(R.styleable.ExtendedButton_extIndicatorColor, color);
+        return attributes.getInt(R.styleable.ExtendedButton_extIndicatorColor, getThemeColor(R.color.color_on_primary));
     }
 
     public void setIndicatorColor(int indicatorColor) {
@@ -238,5 +227,13 @@ public class ExtendedButton extends RelativeLayout {
 
     public void setOnClickListener(OnClickListener listener) {
         this.listener = listener;
+    }
+
+    private int getThemeColor(int colorId) {
+        if (colorId == R.color.color_primary) {
+            return MaterialColors.getColor(mContext, com.google.android.material.R.attr.colorPrimary, mContext.getResources().getColor(R.color.color_primary, mContext.getTheme()));
+        } else {
+            return MaterialColors.getColor(mContext, com.google.android.material.R.attr.colorOnPrimary, mContext.getResources().getColor(R.color.color_on_primary, mContext.getTheme()));
+        }
     }
 }

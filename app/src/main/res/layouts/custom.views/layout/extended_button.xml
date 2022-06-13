@@ -12,10 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
-        android:elevation="0dp"
         android:focusable="true"
         android:text="@string/button"
-        android:textColor="@color/color_on_primary" />
+        android:stateListAnimator="@null"
+        android:textColor="?colorOnPrimary"
+        />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/extended_circular_progress_indicator"

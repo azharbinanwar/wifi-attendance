@@ -12,6 +12,8 @@
     <color name="color_on_primary">#FFFFFF</color>
     <color name="color_primary_variant">#6FC1B7</color>
 
+    <color name="card_background_color">#ffffff</color>
+
 
     <color name="color_secondary">#2CA196</color>
     <color name="color_secondary_variant">#FF018786</color>

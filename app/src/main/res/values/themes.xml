@@ -68,7 +68,7 @@
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.MediumComponent</item>
         <item name="cardCornerRadius">@dimen/radius_8</item>
         <item name="cardElevation">@dimen/zero</item>
-        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardBackgroundColor">@color/card_background_color</item>
         <item name="colorSurface">@color/error_color</item>
         <item name="colorOnSurface">@color/error_color</item>
     </style>

@@ -117,7 +117,7 @@ public class DetailsTile extends MaterialCardView {
     }
 
     public int getTextColor() {
-        return attributes.getColor(R.styleable.DetailsTile_android_textColor, MaterialColors.getColor(mContext, com.google.android.material.R.attr.title, Color.BLACK));
+        return attributes.getColor(R.styleable.DetailsTile_android_textColor, getThemeColor(R.color.black));
     }
 
     public void setTextColor(int textColor) {
@@ -138,11 +138,11 @@ public class DetailsTile extends MaterialCardView {
     }
 
     public int getLeadingTint() {
-        return attributes.getInt(R.styleable.DetailsTile_leadingTint, MaterialColors.getColor(mContext, com.google.android.material.R.attr.colorPrimary, Color.GRAY));
+        return attributes.getInt(R.styleable.DetailsTile_leadingTint, getThemeColor(R.color.color_primary));
     }
 
     public int getLeadingBackground() {
-        return attributes.getInt(R.styleable.DetailsTile_leadingBackground, MaterialColors.getColor(mContext, com.google.android.material.R.attr.colorPrimary, com.google.android.material.R.attr.colorPrimary));
+        return attributes.getInt(R.styleable.DetailsTile_leadingBackground, getThemeColor(R.color.color_primary));
     }
 
     public void setLeadingBackground(int color) {
@@ -151,16 +151,23 @@ public class DetailsTile extends MaterialCardView {
     }
 
     public int getTileBackground() {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = mContext.getTheme();
-        theme.resolveAttribute(com.google.android.material.R.attr.cardBackgroundColor, typedValue, true);
-        @ColorInt int color = typedValue.data;
-        return attributes.getInt(R.styleable.DetailsTile_tileBackground, color);
+        return attributes.getInt(R.styleable.DetailsTile_tileBackground, getThemeColor(R.color.card_background_color));
     }
 
     public void setTileBackground(int color) {
         detailTileCard.setCardBackgroundColor(color);
     }
 
+    private int getThemeColor(int colorId) {
+        if (colorId == R.color.color_primary) {
+            return MaterialColors.getColor(mContext, com.google.android.material.R.attr.colorPrimary, mContext.getResources().getColor(R.color.color_primary, mContext.getTheme()));
+        } else if (colorId == R.color.card_background_color) {
+            return MaterialColors.getColor(mContext, com.google.android.material.R.attr.cardBackgroundColor, mContext.getResources().getColor(R.color.card_background_color, mContext.getTheme()));
+        } else if (colorId == R.color.black) {
+            return MaterialColors.getColor(mContext, com.google.android.material.R.attr.title, Color.BLACK);
+        } else {
+            return MaterialColors.getColor(mContext, com.google.android.material.R.attr.colorOnPrimary, mContext.getResources().getColor(R.color.color_on_primary, mContext.getTheme()));
+        }
 
+    }
 }
