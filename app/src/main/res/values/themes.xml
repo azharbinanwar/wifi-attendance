@@ -114,7 +114,7 @@
         <item name="android:elevation">30dp</item>
         <item name="indicatorSize">30sp</item>
         <item name="trackColor">@android:color/transparent</item>
-        <item name="trackThickness">@dimen/value_2</item>
+<!--        <item name="trackThickness">@dimen/value_4</item>-->
 
 
     </style>

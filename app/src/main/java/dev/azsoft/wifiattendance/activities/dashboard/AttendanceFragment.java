@@ -1,4 +1,4 @@
-package dev.azsoft.wifiattendance.activities.fragments.attendance;
+package dev.azsoft.wifiattendance.activities.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

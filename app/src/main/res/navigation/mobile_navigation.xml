@@ -8,23 +8,23 @@
 
     <fragment
         android:id="@+id/menu_home"
-        android:name="dev.azsoft.wifiattendance.activities.fragments.home.HomeFragment"
+        android:name="dev.azsoft.wifiattendance.activities.dashboard.HomeFragment"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/menu_attendance"
-        android:name="dev.azsoft.wifiattendance.activities.fragments.attendance.AttendanceFragment"
+        android:name="dev.azsoft.wifiattendance.activities.dashboard.AttendanceFragment"
         android:label="@string/attendance"
         tools:layout="@layout/fragment_attendance" />
 
     <fragment
         android:id="@+id/menu_stats"
-        android:name="dev.azsoft.wifiattendance.activities.fragments.stats.StatsFragment"
+        android:name="dev.azsoft.wifiattendance.activities.dashboard.StatsFragment"
         android:label="@string/stats"
         tools:layout="@layout/fragment_stats" />
     <fragment
         android:id="@+id/menu_profile"
-        android:name="dev.azsoft.wifiattendance.activities.fragments.ProfileFragment"
+        android:name="dev.azsoft.wifiattendance.activities.dashboard.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

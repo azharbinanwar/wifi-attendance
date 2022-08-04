@@ -1,4 +1,4 @@
-package dev.azsoft.wifiattendance.activities;
+package dev.azsoft.wifiattendance.activities.dashboard;
 
 import android.os.Bundle;
 
@@ -28,10 +28,8 @@ public class DashboardActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.menu_home, R.id.menu_attendance, R.id.menu_stats, R.id.menu_profile)
+                R.id.menu_stats, R.id.menu_attendance, R.id.menu_stats, R.id.menu_profile)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_dashboard);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

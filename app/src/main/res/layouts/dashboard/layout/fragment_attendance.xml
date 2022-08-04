@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.fragments.attendance.AttendanceFragment">
+    tools:context=".activities.dashboard.AttendanceFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/top_app_bar_layout"

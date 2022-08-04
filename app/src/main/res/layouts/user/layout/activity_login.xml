@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:orientation="vertical"
-    tools:context=".activities.LoginActivity">
+    tools:context=".activities.user.LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,12 +32,13 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="180sp">
+                    android:layout_height="@dimen/value_120">
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="100sp"
-                        android:layout_height="100sp"
+                        android:layout_width="@dimen/value_96"
+                        android:layout_height="@dimen/value_96"
                         android:layout_centerInParent="true"
+                        android:layout_marginVertical="@dimen/value_12"
                         android:background="?colorPrimary"
                         android:src="@drawable/ic_person_outline"
                         app:contentPadding="@dimen/value_24"
@@ -47,14 +48,16 @@
                 </RelativeLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_email"
+                    android:id="@+id/text_input_layout_email"
                     style="@style/Widget.App.TextInputLayout.Outline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
+                    app:errorIconDrawable="@null"
                     app:startIconDrawable="@drawable/ic_mail">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:imeOptions="actionNext"
@@ -67,16 +70,18 @@
                     android:layout_height="@dimen/value_12" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_password"
+                    android:id="@+id/text_input_layout_password"
                     style="@style/Widget.App.TextInputLayout.Outline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
+                    app:errorIconDrawable="@null"
                     app:passwordToggleDrawable="@drawable/show_password_selector"
                     app:passwordToggleEnabled="true"
                     app:startIconDrawable="@drawable/ic_lock">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:imeOptions="actionDone"
@@ -106,12 +111,13 @@
                 <dev.azsoft.wifiattendance.views.ExtendedButton
                     android:id="@+id/btn_login"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/value_56"
                     android:backgroundTint="?colorPrimary"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:text="@string/login"
-                    app:extIndicatorColor="?colorOnPrimary" />
+                    app:extIndicatorColor="?colorOnPrimary"
+                    app:isProcessing="false" />
 
 
             </LinearLayout>

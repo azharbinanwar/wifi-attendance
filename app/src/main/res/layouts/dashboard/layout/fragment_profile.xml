@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.fragments.ProfileFragment">
+    tools:context=".activities.dashboard.ProfileFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -35,14 +35,13 @@
             android:layout_gravity="center">
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image"
                 android:layout_width="@dimen/value_136"
                 android:layout_height="@dimen/value_136"
                 android:layout_centerInParent="true"
                 android:background="?colorPrimaryVariant"
-                android:src="@drawable/ic_person"
-                app:contentPadding="@dimen/value_36"
-                app:shapeAppearanceOverlay="@style/ShapeableImageView.Circular"
-                app:tint="?colorOnPrimary" />
+                android:src="@drawable/ic_person_circle"
+                app:shapeAppearanceOverlay="@style/ShapeableImageView.Circular" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="@dimen/value_48"
@@ -69,8 +68,9 @@
             android:layout_height="@dimen/value_36" />
 
         <dev.azsoft.wifiattendance.views.DetailsTile
+            android:id="@+id/tv_user_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/value_48"
             android:src="@drawable/ic_person"
             android:text="@string/joseph_kamal" />
 
@@ -79,8 +79,9 @@
             android:layout_height="@dimen/value_12" />
 
         <dev.azsoft.wifiattendance.views.DetailsTile
+            android:id="@+id/tv_user_designation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/value_48"
             android:src="@drawable/ic_bag"
             android:text="@string/sr_android_app_developer" />
 
@@ -89,8 +90,9 @@
             android:layout_height="@dimen/value_12" />
 
         <dev.azsoft.wifiattendance.views.DetailsTile
+            android:id="@+id/tv_user_email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/value_48"
             android:src="@drawable/ic_mail"
             android:text="@string/josephkamal_gmail_com" />
 
@@ -99,14 +101,32 @@
             android:layout_height="@dimen/value_12" />
 
         <dev.azsoft.wifiattendance.views.DetailsTile
+            android:id="@+id/tv_user_phone_number"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/value_48"
             android:src="@drawable/ic_phone"
             android:text="@string/_923164944177" />
 
         <Space
             android:layout_width="@dimen/value_12"
             android:layout_height="@dimen/value_12" />
+
+        <dev.azsoft.wifiattendance.views.DetailsTile
+            android:id="@+id/tv_user_joined_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/value_48"
+            android:src="@drawable/ic_calendar"
+            android:text="@string/date" />
+
+        <Space
+            android:layout_width="@dimen/value_12"
+            android:layout_height="@dimen/value_36" />
+
+        <dev.azsoft.wifiattendance.views.ExtendedButton
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/value_56"
+            android:text="@string/logout" />
 
 
     </LinearLayout>

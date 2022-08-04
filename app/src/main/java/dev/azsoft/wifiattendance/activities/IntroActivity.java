@@ -12,10 +12,10 @@ import java.util.Objects;
 
 import dev.azsoft.wifiattendance.R;
 import dev.azsoft.wifiattendance.adapter.IntroAdapter;
+import dev.azsoft.wifiattendance.databasehelper.SharedPrefs;
 import dev.azsoft.wifiattendance.databinding.ActivityIntroBinding;
 import dev.azsoft.wifiattendance.global.Const;
 import dev.azsoft.wifiattendance.models.Intro;
-import dev.azsoft.wifiattendance.utils.SharedPrefs;
 
 public class IntroActivity extends AppCompatActivity {
     private List<Intro> introList;
